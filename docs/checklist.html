@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Website Content Checklist — TestPortal Virtual Academy</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+  }
+
+  :root {
+    --navy: #0E2A5C;
+    --green: #1F7A46;
+    --gold: #C8901A;
+    --ink: #14181F;
+    --muted: #5A6472;
+    --rule: #D8DEE7;
+    --paper: #F6F8FB;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    margin: 0;
+    font-family: "Georgia", "Cambria", "Times New Roman", serif;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  /* ---------- Letterhead (matches the contract) ---------- */
+
+  .letterhead {
+    border-bottom: 2.5pt solid var(--navy);
+    padding-bottom: 10pt;
+    margin-bottom: 4pt;
+  }
+
+  .lh-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16pt;
+  }
+
+  .lh-mark { display: flex; align-items: center; gap: 10pt; }
+
+  .crest { width: 40pt; height: 40pt; flex: none; }
+
+  .lh-name {
+    font-size: 16.5pt;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.2pt;
+    line-height: 1.15;
+  }
+
+  .lh-tag {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 7.2pt;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    color: var(--green);
+    font-weight: 600;
+    margin-top: 3pt;
+  }
+
+  .lh-meta {
+    text-align: right;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 7.6pt;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  .lh-meta strong {
+    display: block;
+    color: var(--navy);
+    font-size: 8pt;
+    letter-spacing: 1.1pt;
+    text-transform: uppercase;
+    margin-bottom: 2pt;
+  }
+
+  .accent-bar { height: 3pt; display: flex; margin-bottom: 22pt; }
+  .accent-bar span:nth-child(1) { flex: 3; background: var(--green); }
+  .accent-bar span:nth-child(2) { flex: 1; background: var(--gold); }
+
+  /* ---------- Title ---------- */
+
+  .doc-title { text-align: center; margin-bottom: 18pt; }
+
+  .doc-title h1 {
+    font-size: 15pt;
+    color: var(--navy);
+    margin: 0 0 5pt;
+    letter-spacing: 0.3pt;
+    text-transform: uppercase;
+  }
+
+  .doc-title .sub {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 8.4pt;
+    color: var(--muted);
+    letter-spacing: 0.6pt;
+  }
+
+  /* ---------- Addressing ---------- */
+
+  .addressing {
+    display: flex;
+    gap: 0;
+    border: 0.75pt solid var(--rule);
+    border-top: 2.5pt solid var(--navy);
+    margin-bottom: 16pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .addressing div {
+    flex: 1;
+    padding: 8pt 12pt;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 8.6pt;
+  }
+
+  .addressing div + div { border-left: 0.75pt solid var(--rule); }
+
+  .addressing .k {
+    display: block;
+    font-size: 6.8pt;
+    letter-spacing: 1.2pt;
+    text-transform: uppercase;
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 3pt;
+  }
+
+  .addressing .v { color: var(--navy); font-weight: 600; font-size: 9.4pt; }
+
+  /* ---------- Intro ---------- */
+
+  .intro {
+    background: var(--paper);
+    border-left: 3pt solid var(--navy);
+    padding: 10pt 13pt;
+    margin-bottom: 20pt;
+    font-size: 10pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .intro p { margin: 0 0 7pt; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* ---------- Sections ---------- */
+
+  h2 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 9.6pt;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: var(--navy);
+    border-bottom: 0.75pt solid var(--rule);
+    padding-bottom: 4pt;
+    margin: 17pt 0 9pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h2 .num { display: inline-block; min-width: 20pt; color: var(--green); }
+
+  .tag {
+    float: right;
+    font-size: 6.8pt;
+    letter-spacing: 0.9pt;
+    background: var(--gold);
+    color: #FFFFFF;
+    padding: 1.5pt 6pt;
+    border-radius: 2pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    top: -1pt;
+  }
+
+  p { margin: 0 0 8pt; orphans: 3; widows: 3; }
+
+  .lead { margin-bottom: 7pt; }
+
+  /* ---------- Checkbox items ---------- */
+
+  ul.check {
+    list-style: none;
+    margin: 0 0 9pt;
+    padding: 0;
+  }
+
+  ul.check > li {
+    position: relative;
+    padding-left: 20pt;
+    margin-bottom: 6pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  ul.check > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.2pt;
+    width: 9.5pt;
+    height: 9.5pt;
+    border: 0.9pt solid var(--navy);
+    border-radius: 1.5pt;
+    background: #FFFFFF;
+  }
+
+  ul.check ul {
+    list-style: disc;
+    margin: 4pt 0 0;
+    padding-left: 14pt;
+    font-size: 9.8pt;
+    color: var(--muted);
+  }
+
+  ul.check ul li { margin-bottom: 2.5pt; }
+
+  /* ---------- Callout ---------- */
+
+  .callout {
+    border: 0.75pt solid var(--rule);
+    border-left: 3pt solid var(--gold);
+    background: #FFFCF4;
+    padding: 9pt 12pt;
+    margin: 9pt 0 11pt;
+    font-size: 9.8pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .callout.info {
+    border-left-color: var(--green);
+    background: #F4FAF6;
+  }
+
+  .callout .cl-head {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 7.4pt;
+    letter-spacing: 1.2pt;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4pt;
+  }
+
+  .callout.info .cl-head { color: var(--green); }
+
+  .callout p { margin: 0 0 6pt; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* ---------- Closing ---------- */
+
+  .closing {
+    margin-top: 20pt;
+    border-top: 2.5pt solid var(--navy);
+    padding-top: 12pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .closing h3 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 9.6pt;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: var(--navy);
+    margin: 0 0 7pt;
+  }
+
+  .sign-off {
+    margin-top: 12pt;
+    font-size: 10pt;
+  }
+
+  .sign-off strong { color: var(--navy); }
+
+  .endnote {
+    margin-top: 18pt;
+    padding-top: 8pt;
+    border-top: 0.75pt solid var(--rule);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 7.4pt;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.3pt;
+  }
+
+  code {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 9.4pt;
+    background: var(--paper);
+    padding: 0.5pt 3pt;
+    border-radius: 2pt;
+    color: var(--navy);
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= LETTERHEAD ======================= -->
+<div class="letterhead">
+  <div class="lh-row">
+    <div class="lh-mark">
+      <svg class="crest" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TestPortal Virtual Academy emblem">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#0E2A5C" stroke-width="4"/>
+        <circle cx="50" cy="50" r="37" fill="none" stroke="#1F7A46" stroke-width="2"/>
+        <path d="M50 14 L58 42 L86 50 L58 58 L50 86 L42 58 L14 50 L42 42 Z" fill="#0E2A5C"/>
+        <path d="M50 24 L55 45 L76 50 L55 55 L50 76 L45 55 L24 50 L45 45 Z" fill="#1F7A46"/>
+        <circle cx="50" cy="50" r="6" fill="#C8901A"/>
+      </svg>
+      <div>
+        <div class="lh-name">TestPortal Virtual Academy</div>
+        <div class="lh-tag">Quality Teaching &nbsp;·&nbsp; Confident Results</div>
+      </div>
+    </div>
+    <div class="lh-meta">
+      <strong>Registered Address</strong>
+      135 Great Horton Road<br>
+      Bradford, BD7 1AL<br>
+      United Kingdom<br>
+      info@testportalva.org &nbsp;·&nbsp; +44 73950 16174
+    </div>
+  </div>
+</div>
+<div class="accent-bar"><span></span><span></span></div>
+
+<!-- ======================= TITLE ======================= -->
+<div class="doc-title">
+  <h1>Website Content Checklist</h1>
+  <div class="sub">Materials required to build your website</div>
+</div>
+
+<!-- ======================= ADDRESSING ======================= -->
+<div class="addressing">
+  <div>
+    <span class="k">To</span>
+    <span class="v">Mr. Olufemi</span><br>
+    Director, TestPortal Virtual Academy
+  </div>
+  <div>
+    <span class="k">From</span>
+    <span class="v">Emmanuel Ikpomosa Esekhaigbe</span><br>
+    Web Developer
+  </div>
+  <div>
+    <span class="k">Date</span>
+    <span class="v">30 July 2026</span><br>
+    Ref. TPVA-WEB-2026-01
+  </div>
+</div>
+
+<!-- ======================= INTRO ======================= -->
+<div class="intro">
+  <p>The seven-day build period begins once the deposit has cleared <strong>and</strong> the items below have been received. The more of this you can send in one go, the sooner your website goes live.</p>
+  <p>Anything not yet available will be given a professional placeholder and replaced later at no additional cost &mdash; so please don't hold up the whole list waiting on one item.</p>
+</div>
+
+<!-- ======================= 1 ======================= -->
+<h2><span class="num">1.</span> Logo and Branding <span class="tag">Priority</span></h2>
+<ul class="check">
+  <li>Logo file &mdash; ideally a <strong>PNG with a transparent background</strong> or an <strong>SVG</strong>. A high-resolution JPG is also fine.</li>
+  <li>If you have a version of the logo designed for dark backgrounds (white or light), please send that as well.</li>
+  <li>Confirm the brand colours are correct: <strong>navy blue</strong>, <strong>green</strong> and <strong>gold</strong>, as taken from your flyer.</li>
+</ul>
+<div class="callout info">
+  <div class="cl-head">No logo yet?</div>
+  <p>Not a problem. A placeholder emblem will be used and replaced free of charge the moment the artwork exists.</p>
+</div>
+
+<!-- ======================= 2 ======================= -->
+<h2><span class="num">2.</span> Team Photographs and Details</h2>
+<p class="lead">For <strong>each</strong> person who will appear on the About page:</p>
+<ul class="check">
+  <li>Full name</li>
+  <li>Role or job title (for example, Director, or Lead Mathematics Tutor)</li>
+  <li>Photograph &mdash; clear, well lit, <strong>head and shoulders</strong>, facing the camera. A good phone photo is perfectly acceptable; please avoid heavily filtered images or faces cropped out of group shots.</li>
+  <li><em>Optional:</em> one or two lines about them &mdash; qualifications, years of experience, subjects taught</li>
+  <li>Confirm <strong>how many people</strong> will be featured, so the layout can be designed correctly. Four to six works best visually.</li>
+</ul>
+
+<!-- ======================= 3 ======================= -->
+<h2><span class="num">3.</span> Testimonials</h2>
+<p class="lead">Your flyer carries a single quote. A dedicated testimonials page needs more than that to look credible.</p>
+<ul class="check">
+  <li><strong>Four to six genuine testimonials</strong> from parents or students. For each one, please provide:
+    <ul>
+      <li>The quote itself</li>
+      <li>Who it is from &mdash; a first name is sufficient (for example, &ldquo;Mrs. A., parent of a Year 10 student&rdquo; or &ldquo;Year 11 Student&rdquo;)</li>
+      <li>A star rating out of five, if you record them</li>
+    </ul>
+  </li>
+</ul>
+<div class="callout">
+  <div class="cl-head">Consent</div>
+  <p>Please ensure you have permission to publish each testimonial, particularly where the student is under eighteen.</p>
+</div>
+
+<!-- ======================= 4 ======================= -->
+<h2><span class="num">4.</span> Enquiry Email Address</h2>
+<ul class="check">
+  <li>Which inbox should website enquiries be delivered to? (for example, <code>info@testportalva.org</code>)</li>
+  <li>Should a copy also be sent to a second address as a backup?</li>
+</ul>
+
+<!-- ======================= 5 ======================= -->
+<h2><span class="num">5.</span> Website Text</h2>
+<p class="lead">Draft wording will be written for you based on your flyer, which you will review and correct during the revision round. What would help now:</p>
+<ul class="check">
+  <li>A short paragraph on <strong>how the Academy started</strong> and what makes it different &mdash; three to five sentences is plenty.</li>
+  <li>Confirm the tutor credentials you would like published &mdash; for example, DBS-checked, qualified teachers, subject specialists.</li>
+  <li>Confirm how lessons are delivered (<strong>Microsoft Teams</strong>, per your flyer) and whether any other platform is used.</li>
+</ul>
+
+<!-- ======================= 6 ======================= -->
+<h2><span class="num">6.</span> Claims to Verify</h2>
+<p class="lead">The following appear on your flyer and will be published prominently on the website. Once published they become public claims, so please confirm each is current and can be substantiated.</p>
+<ul class="check">
+  <li><strong>300+ students</strong> have trusted the Academy</li>
+  <li><strong>4.9 out of 5</strong> parent rating</li>
+  <li><strong>95%</strong> GCSE pass rate</li>
+  <li>Curricula followed: <strong>British National Curriculum, US Common Core, Australian, Canadian Provincial</strong></li>
+  <li>Subjects: <strong>Mathematics, Physics, Chemistry, Biology, Computer Science, English Language</strong> &mdash; all Year 7 to A-Level</li>
+  <li>Examination boards: <strong>AQA, Pearson Edexcel, OCR</strong></li>
+</ul>
+
+<!-- ======================= 7 ======================= -->
+<h2><span class="num">7.</span> Contact Details</h2>
+<p class="lead">Please confirm these are still correct:</p>
+<ul class="check">
+  <li>Phone and WhatsApp: <strong>+44 73950 16174</strong></li>
+  <li>Email: <strong>info@testportalva.org</strong></li>
+  <li>Address: <strong>135 Great Horton Road, Bradford, BD7 1AL, United Kingdom</strong></li>
+  <li>Any social media accounts to link to &mdash; Facebook, Instagram, TikTok, LinkedIn, YouTube</li>
+</ul>
+
+<!-- ======================= 8 ======================= -->
+<h2><span class="num">8.</span> Pricing</h2>
+<ul class="check">
+  <li>Would you like lesson prices shown on the website, or should enquirers be asked to contact you for a quotation?</li>
+</ul>
+<p>Either approach works. Publishing prices reduces time-wasting enquiries; withholding them generates more enquiries, though a greater share will be casual.</p>
+
+<!-- ======================= 9 ======================= -->
+<h2><span class="num">9.</span> Questions for the FAQ Section</h2>
+<p class="lead">The contact page will carry a short list of frequently asked questions. Please answer whichever apply:</p>
+<ul class="check">
+  <li>How long is a typical lesson, and how often do students attend?</li>
+  <li>What is the class size for small-group sessions?</li>
+  <li>Is the free trial lesson genuinely free, and how does a parent book it?</li>
+  <li>What is the cancellation or rescheduling policy?</li>
+  <li>How and when do parents receive progress reports?</li>
+  <li>Are all tutors DBS-checked?</li>
+</ul>
+
+<!-- ======================= CLOSING ======================= -->
+<div class="closing">
+  <h3>Sending the Files</h3>
+  <p>Please send everything in <strong>one batch</strong> where possible &mdash; WhatsApp, email, or a shared Google Drive folder are all fine. Photographs and the logo are best sent as <strong>files or documents</strong> rather than as compressed images, so that quality is preserved.</p>
+  <p>If anything here is unclear, please just ask.</p>
+  <div class="sign-off">
+    Kind regards,<br>
+    <strong>Emmanuel Ikpomosa Esekhaigbe</strong>
+  </div>
+</div>
+
+<div class="endnote">
+  Website Content Checklist &nbsp;·&nbsp; Ref. TPVA-WEB-2026-01 &nbsp;·&nbsp; 30 July 2026 &nbsp;·&nbsp; TestPortal Virtual Academy
+</div>
+
+</body>
+</html>
+

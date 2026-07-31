@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Brand tokens — sampled from the Academy crest.
+   Navy shield + burgundy laurel + gold trim. No green: the flyer
+   used it, the actual logo does not.
+   --------------------------------------------------------------- */
+@theme {
+  --color-navy: #16244a;
+  --color-navy-deep: #0d1730;
+  --color-navy-soft: #24365f;
+
+  --color-burgundy: #7c1420;
+  --color-burgundy-deep: #5a0d17;
+  --color-burgundy-soft: #9c2b38;
+
+  --color-gold: #c9a227;
+  --color-gold-light: #e2c363;
+  --color-gold-deep: #9c7b16;
+
+  --color-ink: #131720;
+  --color-muted: #5b6577;
+  --color-line: #e2e6ee;
+  --color-paper: #f7f8fb;
+  --color-cream: #fdfcf8;
+
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(19 23 32 / 0.04), 0 8px 24px -12px rgb(19 23 32 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(19 23 32 / 0.05), 0 18px 40px -18px rgb(19 23 32 / 0.22);
+}
+
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  /* Visible focus for keyboard users, invisible for mouse users. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-navy-deep);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Reusable pieces
+   --------------------------------------------------------------- */
+@layer components {
+  /* Small uppercase label that sits above section headings. */
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-burgundy);
+  }
+
+  /* The navy/gold rule used under the crest in the logo. */
+  .rule-brand {
+    height: 3px;
+    width: 4rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-burgundy) 100%);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Motion — respect the user's OS setting
+   --------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
