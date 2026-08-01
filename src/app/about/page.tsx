@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ShieldCheck, Target, Globe2, HeartHandshake } from "lucide-react";
-import { PageHeader, Section, SectionHeading } from "@/components/ui";
+import { ShieldCheck, Target, Globe2, HeartHandshake, ArrowRight } from "lucide-react";
+import { PageHeader, Section, SectionHeading, Button } from "@/components/ui";
 import TeamCard from "@/components/TeamCard";
 import Reveal from "@/components/Reveal";
 import CTABand from "@/components/CTABand";
@@ -156,6 +156,13 @@ export default function AboutPage() {
               <TeamCard member={member} />
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button href="/director" variant="secondary">
+            Read the Director&rsquo;s Welcome
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Button>
         </div>
       </Section>
 

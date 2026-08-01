@@ -72,9 +72,11 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
+          {/* Six nav items plus a CTA already fill the bar at lg — the phone
+              number only appears once there is genuinely room for it. */}
           <a
             href={`tel:+${site.phone.raw}`}
-            className="flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-navy"
+            className="hidden items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-navy xl:flex"
           >
             <Phone className="h-4 w-4" aria-hidden />
             {site.phone.display}

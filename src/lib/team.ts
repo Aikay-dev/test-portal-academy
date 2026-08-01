@@ -22,9 +22,11 @@ export type TeamMember = {
 export const team: TeamMember[] = [
   {
     name: "Olufemi Adebayo",
-    role: "Director",
-    bio: "Leads the Academy's teaching strategy and oversees tutor recruitment, ensuring every student is matched with a specialist in their subject.",
-    placeholder: true,
+    role: "Founder & Director",
+    subjects: "Mathematics & Mechanics — Year 7 to A-Level",
+    bio: "An experienced mathematics educator, researcher and academic mentor whose career spans mathematics, engineering and teacher education. He leads the Academy's teaching strategy and still teaches Mathematics and Mechanics himself.",
+    image: "/images/team/olufemi-adebayo.jpg",
+    placeholder: false,
   },
   {
     name: "Tutor Name",

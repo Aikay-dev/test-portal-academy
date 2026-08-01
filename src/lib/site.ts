@@ -24,15 +24,15 @@ export const site = {
   },
 
   phone: {
-    display: "+44 73950 16174",
+    display: "+44 7350 167144",
     /** E.164, digits only — used for tel: and wa.me links. */
-    raw: "447395016174",
+    raw: "447350167144",
   },
 
   address: {
     street: "135 Great Horton Road",
     city: "Bradford",
-    postcode: "BD7 1AL",
+    postcode: "BD7 1QG",
     country: "United Kingdom",
     get full() {
       return `${this.street}, ${this.city}, ${this.postcode}, ${this.country}`;
@@ -60,6 +60,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
   { href: "/about", label: "About" },
+  { href: "/director", label: "Director" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact" },
 ] as const;
