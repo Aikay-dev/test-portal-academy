@@ -10,6 +10,13 @@ export type Level = {
   topics: string[];
 };
 
+/** Optional international test preparation offered alongside a subject. */
+export type Certification = {
+  name: string;
+  detail: string;
+  focus: string[];
+};
+
 export type Subject = {
   slug: string;
   name: string;
@@ -18,6 +25,7 @@ export type Subject = {
   blurb: string;
   boards: string[];
   levels: Level[];
+  certifications?: Certification[];
 };
 
 export const subjects: Subject[] = [
@@ -170,9 +178,9 @@ export const subjects: Subject[] = [
     slug: "english-language",
     name: "English Language",
     icon: "message",
-    range: "Year 7 – A-Level",
+    range: "Year 7 – A-Level · Test Prep",
     blurb:
-      "Reading closely and writing clearly — the two skills that lift grades across every other subject as well.",
+      "Reading closely and writing clearly — the two skills that lift grades across every other subject as well. We also prepare candidates for IELTS, TOEFL, CELPIP and the SAT.",
     boards: ["AQA", "Pearson Edexcel", "OCR"],
     levels: [
       {
@@ -192,6 +200,48 @@ export const subjects: Subject[] = [
         years: "Years 12–13",
         summary: "Linguistic frameworks, discourse analysis and independent investigation.",
         topics: ["Language levels and frameworks", "Child language acquisition", "Language change", "Language and identity", "NEA investigation support"],
+      },
+    ],
+    certifications: [
+      {
+        name: "IELTS",
+        detail: "Academic & General Training",
+        focus: [
+          "All four papers: Listening, Reading, Writing, Speaking",
+          "Task 1 and Task 2 writing to the band descriptors",
+          "Timed practice under exam conditions",
+          "Band-score feedback after every mock",
+        ],
+      },
+      {
+        name: "TOEFL iBT",
+        detail: "Internet-based test",
+        focus: [
+          "Integrated reading, listening, speaking and writing tasks",
+          "Note-taking technique for the listening section",
+          "Structuring the independent writing task",
+          "Pacing and screen-based exam practice",
+        ],
+      },
+      {
+        name: "CELPIP",
+        detail: "Canadian English proficiency",
+        focus: [
+          "General and General LS formats",
+          "Canadian English conventions and register",
+          "Functional writing: emails and survey responses",
+          "Fully computer-delivered practice",
+        ],
+      },
+      {
+        name: "SAT",
+        detail: "US college admissions",
+        focus: [
+          "Reading and Writing modules",
+          "Grammar, punctuation and rhetorical skills",
+          "Evidence-based reading strategy",
+          "Digital adaptive format and timing",
+        ],
       },
     ],
   },

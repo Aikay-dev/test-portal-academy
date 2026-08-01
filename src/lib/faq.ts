@@ -27,6 +27,11 @@ export const faqs: Faq[] = [
       "Year 7 through to A-Level, in Mathematics, Physics, Chemistry, Biology, Computer Science and English Language. That spans Key Stage 3, GCSE and A-Level.",
   },
   {
+    question: "Do you prepare candidates for IELTS, TOEFL, CELPIP or the SAT?",
+    answer:
+      "Yes. Alongside school English we offer focused preparation for IELTS (Academic and General Training), TOEFL iBT, CELPIP and the SAT. Lessons cover every paper, exam technique and timing, with marked mock tests and feedback against the official band descriptors or scoring criteria.",
+  },
+  {
     question: "Which exam boards do you teach?",
     answer:
       "AQA, Pearson Edexcel and OCR. Tell us which board your child's school follows and lessons will be aligned to that specification.",

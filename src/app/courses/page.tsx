@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check, Users, User } from "lucide-react";
+import { Check, Users, User, Award } from "lucide-react";
 import { PageHeader, Section, SectionHeading, Button } from "@/components/ui";
 import SubjectIcon from "@/components/SubjectIcon";
 import Reveal from "@/components/Reveal";
@@ -9,7 +9,7 @@ import { subjects, curricula } from "@/lib/courses";
 export const metadata: Metadata = {
   title: "Courses — Maths, Sciences, Computer Science & English",
   description:
-    "Online tuition in Mathematics, Physics, Chemistry, Biology, Computer Science and English Language, from Year 7 through GCSE to A-Level. Aligned to AQA, Pearson Edexcel and OCR.",
+    "Online tuition in Mathematics, Physics, Chemistry, Biology, Computer Science and English Language, from Year 7 through GCSE to A-Level. Aligned to AQA, Pearson Edexcel and OCR, plus IELTS, TOEFL, CELPIP and SAT preparation.",
   alternates: { canonical: "/courses" },
 };
 
@@ -178,6 +178,57 @@ export default function CoursesPage() {
                     </div>
                   ))}
                 </div>
+
+                {/* International test preparation (English Language only) */}
+                {subject.certifications && (
+                  <div className="border-t border-line bg-cream p-7 sm:p-9">
+                    <div className="flex items-start gap-4">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-burgundy text-white">
+                        <Award className="h-5 w-5" aria-hidden />
+                      </span>
+                      <div>
+                        <h4 className="text-lg font-bold">
+                          International Test Preparation
+                        </h4>
+                        <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-muted">
+                          Alongside the school curriculum we prepare candidates
+                          for the English proficiency and admissions tests
+                          required for study, work and migration.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                      {subject.certifications.map((cert) => (
+                        <div
+                          key={cert.name}
+                          className="rounded-xl border border-line bg-white p-6 shadow-card"
+                        >
+                          <p className="font-display text-xl font-bold text-navy">
+                            {cert.name}
+                          </p>
+                          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-gold-deep">
+                            {cert.detail}
+                          </p>
+                          <ul className="mt-4 space-y-2">
+                            {cert.focus.map((item) => (
+                              <li
+                                key={item}
+                                className="flex items-start gap-2.5 text-sm leading-relaxed text-muted"
+                              >
+                                <Check
+                                  className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-deep"
+                                  aria-hidden
+                                />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}

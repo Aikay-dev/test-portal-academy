@@ -18,14 +18,27 @@ export default function Logo({ variant = "dark", crestOnly = false, className }:
       className={cn("group flex items-center gap-3", className)}
       aria-label={`${site.name} — home`}
     >
-      <Image
-        src="/logo.png"
-        alt=""
-        width={56}
-        height={56}
-        priority
-        className="h-11 w-11 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-12 sm:w-12"
-      />
+      {/*
+        On dark surfaces the crest needs a light chip behind it — its shield
+        and lettering are navy and would otherwise blend into the background.
+      */}
+      <span
+        className={cn(
+          "flex shrink-0 items-center justify-center transition-transform duration-300 group-hover:scale-105",
+          variant === "light"
+            ? "h-11 w-11 rounded-full bg-cream p-1.5 ring-1 ring-gold/40 sm:h-12 sm:w-12"
+            : "h-11 w-11 sm:h-12 sm:w-12",
+        )}
+      >
+        <Image
+          src="/logo.png"
+          alt=""
+          width={56}
+          height={56}
+          priority
+          className="h-full w-full object-contain"
+        />
+      </span>
 
       {!crestOnly && (
         <span className="flex flex-col leading-none">

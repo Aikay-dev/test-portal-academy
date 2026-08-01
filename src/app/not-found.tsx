@@ -16,13 +16,10 @@ export default function NotFound() {
       />
 
       <div className="relative mx-auto flex min-h-[70vh] max-w-2xl flex-col items-center justify-center px-4 py-28 text-center sm:px-6">
-        <Image
-          src="/logo.png"
-          alt=""
-          width={1004}
-          height={683}
-          className="w-40 opacity-90"
-        />
+        {/* Cream plaque — the crest's navy lettering vanishes on this background. */}
+        <div className="rounded-2xl bg-cream p-5 shadow-xl ring-1 ring-gold/40">
+          <Image src="/logo.png" alt="" width={1004} height={683} className="w-40" />
+        </div>
 
         <p className="mt-8 font-display text-6xl font-bold text-gold sm:text-7xl">
           404

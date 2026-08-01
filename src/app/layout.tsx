@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "computer science tutor",
     "Key Stage 3 tuition",
     "UK online tutoring",
+    "IELTS preparation",
+    "TOEFL preparation",
+    "CELPIP preparation",
+    "SAT preparation",
   ],
   authors: [{ name: site.name }],
   openGraph: {

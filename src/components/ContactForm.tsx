@@ -84,6 +84,31 @@ export default function ContactForm() {
       return;
     }
 
+    /*
+     * The six subject checkboxes all share the name "subjects". EmailJS does
+     * not reliably collect repeated field names, so the ticked values are
+     * flattened into a single hidden input before sending. A timestamp is
+     * added at the same time so the email shows when the enquiry came in.
+     */
+    const ticked = Array.from(
+      form.querySelectorAll<HTMLInputElement>('input[name="subjects"]:checked'),
+    ).map((input) => input.value);
+
+    const subjectsField = form.elements.namedItem(
+      "subjects_list",
+    ) as HTMLInputElement | null;
+    if (subjectsField) {
+      subjectsField.value = ticked.length ? ticked.join(", ") : "None specified";
+    }
+
+    const timeField = form.elements.namedItem("time") as HTMLInputElement | null;
+    if (timeField) {
+      timeField.value = new Date().toLocaleString("en-GB", {
+        dateStyle: "full",
+        timeStyle: "short",
+      });
+    }
+
     setStatus("sending");
     setMessage("");
 
@@ -274,6 +299,11 @@ export default function ContactForm() {
           <label htmlFor="company">Company (leave blank)</label>
           <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
         </div>
+
+        {/* Populated on submit — see handleSubmit. These are what the
+            EmailJS template reads for {{subjects_list}} and {{time}}. */}
+        <input type="hidden" name="subjects_list" defaultValue="" />
+        <input type="hidden" name="time" defaultValue="" />
 
         {/* Consent */}
         <div className="sm:col-span-2">

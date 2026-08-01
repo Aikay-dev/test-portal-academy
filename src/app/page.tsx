@@ -76,21 +76,29 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Crest */}
+          {/*
+            Crest. The artwork's wordmark and motto are dark navy, so it is
+            mounted on a cream plaque — on the navy hero directly it loses all
+            contrast and the lettering disappears.
+          */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-sm lg:max-w-none">
               <div
                 aria-hidden
-                className="absolute inset-0 -m-6 rounded-full bg-white/5 blur-2xl"
+                className="absolute inset-0 -m-8 rounded-[2.5rem] bg-gold/15 blur-2xl"
               />
-              <Image
-                src="/logo.png"
-                alt={`${site.name} crest`}
-                width={1004}
-                height={683}
-                priority
-                className="relative w-full drop-shadow-2xl"
-              />
+              <div className="relative rounded-[2rem] bg-cream p-7 shadow-2xl ring-1 ring-gold/40 sm:p-9">
+                <div className="rounded-[1.4rem] ring-1 ring-inset ring-gold/25">
+                  <Image
+                    src="/logo.png"
+                    alt={`${site.name} crest`}
+                    width={1004}
+                    height={683}
+                    priority
+                    className="w-full p-3"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

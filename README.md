@@ -46,7 +46,7 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxx
 
 ### Template variables
 
-Your EmailJS template must use these exact variable names — they match the `name` attributes on the form fields:
+Your EmailJS template must use these exact variable names — they match the `name` attributes on the form fields. **EmailJS's default starter template does not match**; see [`docs/EMAILJS-TEMPLATE.md`](docs/EMAILJS-TEMPLATE.md) for the exact values to paste in.
 
 | Variable | Field |
 |---|---|
@@ -55,25 +55,11 @@ Your EmailJS template must use these exact variable names — they match the `na
 | `{{phone}}` | Phone / WhatsApp |
 | `{{enquiry_type}}` | Trial / general / pricing / other |
 | `{{year_group}}` | Student's year group |
-| `{{subjects}}` | Subjects ticked |
+| `{{subjects_list}}` | Subjects ticked, comma-separated |
+| `{{time}}` | Submission timestamp |
 | `{{message}}` | Message body |
 
-A workable template body:
-
-```
-New enquiry from the website
-
-Name:      {{from_name}}
-Email:     {{from_email}}
-Phone:     {{phone}}
-
-Enquiry:   {{enquiry_type}}
-Year group:{{year_group}}
-Subjects:  {{subjects}}
-
-Message:
-{{message}}
-```
+> Use `subjects_list`, not `subjects`. The visible checkboxes share the name `subjects`, and EmailJS does not reliably collect repeated field names — the form flattens them into a single hidden `subjects_list` field on submit.
 
 Set the template's **Reply-To** to `{{from_email}}` so replying goes straight back to the parent.
 
