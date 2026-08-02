@@ -9,6 +9,7 @@ export const director = {
   name: "Olufemi Adebayo",
   title: "Founder and Director",
   teaches: "Mathematics & Mechanics — Year 7 to A-Level",
+  /** Deliberately a different photograph from the one on the team grid. */
   image: "/images/team/olufemi-adebayo.jpg",
 
   /** Pulled out as the page's opening statement. */

@@ -25,7 +25,9 @@ export const team: TeamMember[] = [
     role: "Founder & Director",
     subjects: "Mathematics & Mechanics — Year 7 to A-Level",
     bio: "An experienced mathematics educator, researcher and academic mentor whose career spans mathematics, engineering and teacher education. He leads the Academy's teaching strategy and still teaches Mathematics and Mechanics himself.",
-    image: "/images/team/olufemi-adebayo.jpg",
+    // Team-grid portrait. The Director page uses a different photograph of
+    // him — see `image` in lib/director.ts.
+    image: "/images/team/olufemi-adebayo-team.jpg",
     placeholder: false,
   },
   {
