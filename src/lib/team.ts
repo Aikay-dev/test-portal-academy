@@ -10,9 +10,11 @@
  * Members left as placeholders render a neutral monogram tile instead of a
  * photo, so the grid never breaks while you are waiting on pictures.
  *
- * `bio` is optional and currently only set for the Director — the tutors'
- * biographies have not been supplied yet. Add a sentence or two per person
- * when they arrive; the card renders it automatically.
+ * `bio` is optional and deliberately unset for everyone: no biographies have
+ * been supplied, so every card shows name, role and subject only and the grid
+ * reads as one consistent set. If bios ever arrive, add them for the whole
+ * team at once — filling in one person alone makes that card look favoured
+ * and the rest look unfinished.
  */
 
 export type TeamMember = {
@@ -29,7 +31,6 @@ export const team: TeamMember[] = [
     name: "Olufemi Adebayo",
     role: "Founder & Director",
     subjects: "Mathematics & Mechanics — Year 7 to A-Level",
-    bio: "An experienced mathematics educator, researcher and academic mentor whose career spans mathematics, engineering and teacher education. He leads the Academy's teaching strategy and still teaches Mathematics and Mechanics himself.",
     // Team-grid portrait. The Director page uses a different photograph of
     // him — see `image` in lib/director.ts.
     image: "/images/team/olufemi-adebayo-team.jpg",
