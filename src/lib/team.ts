@@ -1,13 +1,18 @@
 /**
  * Team shown on the About page.
  *
- * TO ADD A REAL PERSON:
- *   1. Drop their photo in  public/images/team/  (square crop works best)
+ * TO ADD A PERSON:
+ *   1. Drop their photo in  public/images/team/  — crop to 4:5 (portrait),
+ *      which is the ratio the card renders at
  *   2. Set `image` to "/images/team/their-file.jpg"
  *   3. Set `placeholder` to false
  *
  * Members left as placeholders render a neutral monogram tile instead of a
  * photo, so the grid never breaks while you are waiting on pictures.
+ *
+ * `bio` is optional and currently only set for the Director — the tutors'
+ * biographies have not been supplied yet. Add a sentence or two per person
+ * when they arrive; the card renders it automatically.
  */
 
 export type TeamMember = {
@@ -31,25 +36,74 @@ export const team: TeamMember[] = [
     placeholder: false,
   },
   {
-    name: "Tutor Name",
-    role: "Lead Mathematics Tutor",
-    subjects: "Mathematics — Year 7 to A-Level",
-    bio: "Add a short biography here: qualifications, years of teaching experience, and the levels they specialise in.",
-    placeholder: true,
+    name: "Dr. Jumoke Adebayo",
+    role: "English Language Specialist",
+    subjects: "IELTS · TOEFL · CELPIP · SAT",
+    image: "/images/team/jumoke-adebayo.jpg",
+    placeholder: false,
   },
   {
-    name: "Tutor Name",
-    role: "Science Tutor",
-    subjects: "Physics & Chemistry — Year 7 to A-Level",
-    bio: "Add a short biography here: qualifications, years of teaching experience, and the levels they specialise in.",
-    placeholder: true,
+    name: "Oladele Alawode",
+    role: "ICT & Computer Science Specialist",
+    subjects: "Computer Science & Coding",
+    image: "/images/team/oladele-alawode.jpg",
+    placeholder: false,
   },
   {
-    name: "Tutor Name",
-    role: "Computer Science Tutor",
-    subjects: "Computer Science — Year 7 to A-Level",
-    bio: "Add a short biography here: qualifications, years of teaching experience, and the levels they specialise in.",
-    placeholder: true,
+    name: "Michael Semire",
+    role: "Physics Specialist",
+    subjects: "Physics",
+    image: "/images/team/michael-semire.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Kayode John Olalekan",
+    role: "Biology Specialist",
+    subjects: "Biology",
+    image: "/images/team/kayode-john-olalekan.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Toheeb Omitoogun",
+    role: "Chemistry Specialist",
+    subjects: "Chemistry",
+    image: "/images/team/toheeb-omitoogun.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Elizabeth Ojo",
+    role: "Chemistry Tutor",
+    subjects: "Chemistry",
+    image: "/images/team/elizabeth-ojo.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Oluwakemi Adebanjo",
+    role: "Mathematics Tutor",
+    subjects: "Mathematics — Key Stage 2 & 3",
+    image: "/images/team/oluwakemi-adebanjo.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Isaiah Fatehinshe",
+    role: "English Specialist",
+    subjects: "English — Key Stage 3 & 4",
+    image: "/images/team/isaiah-fatehinshe.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Adekunle Adelokun",
+    role: "English Language & Literature Specialist",
+    subjects: "English Language & Literature in English",
+    image: "/images/team/adekunle-adelokun.jpg",
+    placeholder: false,
+  },
+  {
+    name: "Babatunde Samuel Tosin",
+    role: "English Language & Literature Tutor",
+    subjects: "English Language & Literature in English",
+    image: "/images/team/babatunde-samuel-tosin.jpg",
+    placeholder: false,
   },
 ];
 
