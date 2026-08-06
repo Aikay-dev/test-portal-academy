@@ -59,12 +59,6 @@ export const faqs: Faq[] = [
       "You receive a written progress report every week setting out what was covered, what improved and what still needs work. Homework is set after each lesson and marked before the next.",
   },
   {
-    question: "Are your tutors DBS-checked?",
-    answer:
-      "Yes. Every tutor teaching a child holds an enhanced DBS certificate, and all are qualified specialists in the subjects they teach.",
-    needsConfirming: true,
-  },
-  {
     question: "What if we need to cancel or reschedule a lesson?",
     answer:
       "Let us know as far in advance as you can and we will do our best to move the lesson to another slot. Please contact us directly to discuss the current rescheduling policy.",

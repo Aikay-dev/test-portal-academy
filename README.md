@@ -98,7 +98,7 @@ Members left as placeholders render a neutral monogram tile, so the grid never b
 
 ### Answers still to confirm
 
-Several FAQ answers in `src/lib/faq.ts` are marked `needsConfirming: true`. These were written from the Academy's marketing material and should be checked with the Director before launch — they cover pricing, group sizes, DBS checks and the cancellation policy.
+Several FAQ answers in `src/lib/faq.ts` are marked `needsConfirming: true`. These were written from the Academy's marketing material and should be checked with the Director before launch — they cover pricing, group sizes and the cancellation policy.
 
 ---
 

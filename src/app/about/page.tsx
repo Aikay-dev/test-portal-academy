@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us — Our Story, Approach and Team",
   description:
-    "Meet the team behind TestPortal Virtual Academy. UK-based, DBS-checked subject specialists teaching STEM and English from Year 7 to A-Level.",
+    "Meet the team behind TestPortal Virtual Academy. Professional subject specialists teaching STEM and English from Year 7 to A-Level.",
   alternates: { canonical: "/about" },
 };
 
@@ -147,7 +147,7 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="Meet the team"
           title="The people teaching your child"
-          intro="Every tutor is a specialist in the subject they teach, and every tutor working with a child holds an enhanced DBS certificate."
+          intro="Every tutor is a specialist in the subject they teach, and every tutor working with a child has extensive experience in teaching."
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

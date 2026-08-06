@@ -110,8 +110,8 @@ export const team: TeamMember[] = [
 
 /** Credentials strip shown beneath the team grid. */
 export const credentials = [
-  { title: "DBS-Checked Tutors", body: "Every tutor teaching a child holds an enhanced DBS certificate." },
+  { title: "Professional Tutors", body: "Every tutor teaching a student has extensive experience in teaching their subject area." },
   { title: "Subject Specialists", body: "Tutors teach only the subjects they are qualified and experienced in." },
   { title: "Exam-Board Aligned", body: "Lessons follow AQA, Pearson Edexcel and OCR specifications precisely." },
-  { title: "UK-Based Teaching", body: "Delivered from the United Kingdom to students anywhere in the world." },
+  { title: "Teaching from the UK and Nigeria", body: "Delivered by experienced teachers based in the United Kingdom and Nigeria to students anywhere in the world." },
 ];

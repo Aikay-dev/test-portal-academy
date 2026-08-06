@@ -56,7 +56,7 @@ Your flyer has one quote. A dedicated testimonials page needs more to look credi
 Draft copy will be written for you based on your flyer. You'll review and correct it during the revision round. What would help now:
 
 - [ ] A short paragraph on **how the Academy started** and what makes it different (3–5 sentences is plenty)
-- [ ] Confirm the tutor credentials to publish — e.g. *DBS-checked*, *qualified teachers*, *subject specialists*
+- [ ] Confirm the tutor credentials to publish — e.g. *qualified teachers*, *subject specialists*
 - [ ] Confirm how lessons are delivered (**Microsoft Teams**, per your flyer) and whether anything else is used
 
 ---
@@ -100,7 +100,6 @@ The contact page will carry a short FAQ. Please answer whichever apply:
 - [ ] Is the free trial lesson genuinely free, and how does a parent book it?
 - [ ] What is the cancellation or rescheduling policy?
 - [ ] How and when do parents receive progress reports?
-- [ ] Are all tutors DBS-checked?
 
 ---
 
