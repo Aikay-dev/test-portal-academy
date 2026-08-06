@@ -29,7 +29,7 @@ export type TeamMember = {
 export const team: TeamMember[] = [
   {
     name: "Olufemi Adebayo",
-    role: "Founder & Director",
+    role: "Director",
     subjects: "Mathematics & Mechanics — Year 7 to A-Level",
     // Team-grid portrait. The Director page uses a different photograph of
     // him — see `image` in lib/director.ts.

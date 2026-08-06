@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Meet the Director — Olufemi Adebayo",
   description:
-    "A welcome from Olufemi Adebayo, Founder and Director of TestPortal Virtual Academy — mathematics educator, researcher and academic mentor.",
+    "A welcome from Olufemi Adebayo, Director of TestPortal Virtual Academy — mathematics educator, researcher and academic mentor.",
   alternates: { canonical: "/director" },
 };
 
